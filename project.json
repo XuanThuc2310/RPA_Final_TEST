@@ -1,7 +1,7 @@
 {
   "name": "Final_TEST",
   "description": "RPA Final_TEST",
-  "main": "Main.xaml",
+  "main": "main_flow.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.8.6]",
     "UiPath.Form.Activities": "[2.0.2]",
@@ -47,6 +47,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "7d3255b2-1167-433f-8113-e3f34bf5862f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "main_flow.xaml",
+      "uniqueId": "4a70bc28-3164-4929-a19a-936b31be6b1e",
       "input": [],
       "output": []
     }
