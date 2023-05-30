@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="983,827" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1068,1656" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="27">
+    <scg:List x:TypeArguments="x:String" Capacity="29">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -28,10 +28,12 @@
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -50,9 +52,12 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="380,571" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="558,1591" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sDate" />
       <Variable x:TypeArguments="x:String" Name="eDate" />
@@ -65,57 +70,118 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" FormHeight="{x:Null}" FormTitle="{x:Null}" FormWidth="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" CreateFormId="56ad6d5f-228f-4c2c-b044-dd79c79e521a" DevTools="False" DisableMaximizeButton="False" DisableMinimizeButton="False" DisableSanitize="False" DisplayName="Init Form to Input" EnableAccessibility="False" FormSchema="%[{&quot;label&quot;:&quot;Select Output Path&quot;,&quot;customClass&quot;:&quot;folderPath&quot;,&quot;showAllFileTypes&quot;:true,&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;outPath&quot;,&quot;input&quot;:true,&quot;suffix&quot;:&quot;Select &quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;filePath&quot;},{&quot;label&quot;:&quot;From&quot;,&quot;allowInput&quot;:false,&quot;format&quot;:&quot;yyyy/MM/dd&quot;,&quot;tooltip&quot;:&quot;Nhập ngày bắt đầu lấy D/Note&quot;,&quot;tableView&quot;:false,&quot;enableMinDateInput&quot;:false,&quot;datePicker&quot;:{&quot;disableWeekends&quot;:false,&quot;disableWeekdays&quot;:false},&quot;enableMaxDateInput&quot;:false,&quot;enableTime&quot;:false,&quot;timePicker&quot;:{&quot;showMeridian&quot;:false},&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;sDate&quot;,&quot;type&quot;:&quot;datetime&quot;,&quot;input&quot;:true,&quot;widget&quot;:{&quot;type&quot;:&quot;calendar&quot;,&quot;displayInTimezone&quot;:&quot;viewer&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;useLocaleSettings&quot;:false,&quot;allowInput&quot;:false,&quot;mode&quot;:&quot;single&quot;,&quot;enableTime&quot;:false,&quot;noCalendar&quot;:false,&quot;format&quot;:&quot;yyyy/MM/dd&quot;,&quot;hourIncrement&quot;:1,&quot;minuteIncrement&quot;:1,&quot;time_24hr&quot;:true,&quot;minDate&quot;:null,&quot;disableWeekends&quot;:false,&quot;disableWeekdays&quot;:false,&quot;maxDate&quot;:null}},{&quot;label&quot;:&quot;To&quot;,&quot;allowInput&quot;:false,&quot;format&quot;:&quot;yyyy/MM/dd&quot;,&quot;tooltip&quot;:&quot;Nhập ngày kết thúc lấy D/Note&quot;,&quot;tableView&quot;:false,&quot;enableMinDateInput&quot;:false,&quot;datePicker&quot;:{&quot;disableWeekends&quot;:false,&quot;disableWeekdays&quot;:false},&quot;enableMaxDateInput&quot;:false,&quot;enableTime&quot;:false,&quot;timePicker&quot;:{&quot;showMeridian&quot;:false},&quot;validate&quot;:{&quot;required&quot;:true},&quot;key&quot;:&quot;eDate&quot;,&quot;type&quot;:&quot;datetime&quot;,&quot;input&quot;:true,&quot;widget&quot;:{&quot;type&quot;:&quot;calendar&quot;,&quot;displayInTimezone&quot;:&quot;viewer&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;useLocaleSettings&quot;:false,&quot;allowInput&quot;:false,&quot;mode&quot;:&quot;single&quot;,&quot;enableTime&quot;:false,&quot;noCalendar&quot;:false,&quot;format&quot;:&quot;yyyy/MM/dd&quot;,&quot;hourIncrement&quot;:1,&quot;minuteIncrement&quot;:1,&quot;time_24hr&quot;:true,&quot;minDate&quot;:null,&quot;disableWeekends&quot;:false,&quot;disableWeekdays&quot;:false,&quot;maxDate&quot;:null}},{&quot;type&quot;:&quot;button&quot;,&quot;label&quot;:&quot;Submit&quot;,&quot;key&quot;:&quot;submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;input&quot;:true,&quot;tableView&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100120&quot;,&quot;Name&quot;:&quot;Default&quot;,&quot;BaseCss&quot;:&quot;./assets/css/themes/uipath.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;./assets/themeicons/uipath.png&quot;,&quot;OverrideCssUrl&quot;:&quot;./assets/css/themes/uipath.custom.css&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" GenerateInputFields="True" sap:VirtualizedContainerService.HintSize="338,209" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="True" StartAsMinimized="False">
-      <ufa:FormActivity.Body>
-        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-        </ActivityAction>
-      </ufa:FormActivity.Body>
-      <ufa:FormActivity.DelayBody>
-        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
-        </ActivityAction>
-      </ufa:FormActivity.DelayBody>
-      <ufa:FormActivity.FormFieldsCollection>
-        <InOutArgument x:TypeArguments="s:DateTime" x:Key="sDate">
-          <mva:VisualBasicReference x:TypeArguments="s:DateTime" ExpressionText="sDateTime" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="s:DateTime" x:Key="eDate">
-          <mva:VisualBasicReference x:TypeArguments="s:DateTime" ExpressionText="eDateTime" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="outPath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="outPath" />
-        </InOutArgument>
-      </ufa:FormActivity.FormFieldsCollection>
-    </ufa:FormActivity>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,129" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-      <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[sDate]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[sDateTime.ToString("yyyy/MM/dd")]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[eDate]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[eDateTime.ToString("yyyy/MM/dd")]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-        </scg:List>
-      </ui:MultipleAssign.AssignOperations>
-    </ui:MultipleAssign>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[sDate+eDate]" />
+    <Sequence DisplayName="Download" sap:VirtualizedContainerService.HintSize="496,1469" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="outPath" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="434,70" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[outPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">C:\Users\knt18757\Desktop\project\RPA\output\Y33097</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'AttachedFile'" sap:VirtualizedContainerService.HintSize="434,1237" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="244d343879c03996dfc4f191802a3179" Selector="&lt;html app='msedge.exe' title='AttachedFile' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1081" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="childWebDL" />
+                <Variable x:TypeArguments="x:String" Name="tsvName" />
+                <Variable x:TypeArguments="x:String" Name="attributeTxt" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetAttribute Attribute="innertext" ContinueOnError="True" DisplayName="Get Attribute 'A  https://jp.nissan.bi...'" sap:VirtualizedContainerService.HintSize="338,212" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                <ui:GetAttribute.Result>
+                  <OutArgument x:TypeArguments="x:String">[attributeTxt]</OutArgument>
+                </ui:GetAttribute.Result>
+                <ui:GetAttribute.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a8e88c7-fe31-40f4-8fd9-0b6fb47fee23" InformativeScreenshot="07166c933e269e6bab3cb265ab0bcf91" Selector="&lt;webctrl tableCol='2' tableRow='15' tag='A' /&gt;" TimeoutMS="2000">
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:GetAttribute.Target>
+              </ui:GetAttribute>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,71" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[attributeTxt]" />
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://jp.nissan.bi...'" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5d29cb0-7e4d-4b02-97d5-6101ee1d2e07" InformativeScreenshot="34719e51c388a7cefb6d99791b070ee3" Selector="&lt;webctrl tableCol='2' tableRow='3' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://jp.nissan.bi...'" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb8363aa-2797-42b4-80b2-bd29e615c3a4" InformativeScreenshot="9b79a1ea4ff486c622760599bfd5aeff" Selector="&lt;webctrl tableCol='2' tableRow='2' tag='A' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ActivateSave" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ActivateSave.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke EditAndSave" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="EditAndSave.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="outPath">[outPath]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="tsvName">[tsvName]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BrowserScope>
+    </Sequence>
   </Sequence>
 </Activity>

@@ -3,11 +3,10 @@
   "description": "RPA Final_TEST",
   "main": "main_flow.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.8.6]",
+    "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Form.Activities": "[2.0.2]",
-    "UiPath.Mail.Activities": "[1.8.6]",
-    "UiPath.System.Activities": "[20.4.0]",
-    "UiPath.UIAutomation.Activities": "[20.4.2]"
+    "UiPath.System.Activities": "[22.4.4]",
+    "UiPath.UIAutomation.Activities": "[22.4.7]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -16,6 +15,7 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
     "requiresUserInteraction": true,
@@ -27,7 +27,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": false
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
