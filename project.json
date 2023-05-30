@@ -1,7 +1,7 @@
 {
   "name": "Final_TEST",
   "description": "RPA Final_TEST",
-  "main": "main_flow.xaml",
+  "main": "Main_FlowChart.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Form.Activities": "[2.0.2]",
@@ -46,14 +46,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "7d3255b2-1167-433f-8113-e3f34bf5862f",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "main_flow.xaml",
-      "uniqueId": "4a70bc28-3164-4929-a19a-936b31be6b1e",
+      "filePath": "Main_FlowChart.xaml",
+      "uniqueId": "5f86cb90-036b-4993-85f1-9390fc412860",
       "input": [],
       "output": []
     }
